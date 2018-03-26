@@ -1,3 +1,5 @@
+'''Right virsion'''
+
 def firstNotRepeatingCharacter(s):
     res = "_"
     d = {}
