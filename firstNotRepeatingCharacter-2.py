@@ -1,4 +1,4 @@
-'''Right virsion'''
+'''Right version'''
 
 def firstNotRepeatingCharacter(s):
     res = "_"
