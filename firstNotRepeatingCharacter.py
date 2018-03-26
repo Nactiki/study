@@ -1,3 +1,5 @@
+'''Slow version'''
+
 def firstNotRepeatingCharacter(s):
     lst = list(s)
     for i in lst:
