@@ -1,0 +1,24 @@
+from collections import Counter
+import numpy as np
+def sudoku2(grid):
+    grid1 = grid.copy()
+    for arr in grid:
+        if check(arr) == False:
+            return False
+    nm = np.array(grid)
+    for arr1 in nm.T:
+        if check(arr1) == False:
+            return False
+    for i in [0,3,6]:
+        for j in [0,3,6]:
+            if check(nm[i:i+3,j:j+3].flatten().tolist()) == False:
+                return False
+    return True
+            
+        
+def check(i):
+    cnt = Counter(i)
+    for i in cnt:
+        if cnt[i] != 1 and i != '.':
+            return False
+    return True
